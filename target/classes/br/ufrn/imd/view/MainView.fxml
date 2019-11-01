@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.controller.MainViewController">
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabelaCarro" layoutX="14.0" layoutY="38.0" prefHeight="448.0" prefWidth="672.0" visible="false">
+              <columns>
+                	<TableColumn fx:id="colunaApelido" prefWidth="169.0" text="Apelido" />
+                	<TableColumn fx:id="colunaModelo" prefWidth="192.0" text="Modelo" />
+                  <TableColumn fx:id="colunaDataFabricacao" prefWidth="176.0" text="Data de fabricação" />
+                  <TableColumn fx:id="colunaPlaca" prefWidth="134.0" text="Placa" />
+              </columns>
+            </TableView>
+            <MenuBar fx:id="menuBar" prefHeight="16.0" prefWidth="700.0">
+              <menus>
+                <Menu fx:id="menuSistema" mnemonicParsing="false" text="Sistema">
+                  <items>
+                    <MenuItem fx:id="menuListarCarros" mnemonicParsing="false" onAction="#listarCarros" text="Listar Carros" />
+                        <MenuItem fx:id="menuCadastrarCarro" mnemonicParsing="false" onAction="#cadastrarCarro" text="Cadastrar Carro" />
+                  </items>
+                </Menu>
+                <Menu fx:id="menuAjuda" mnemonicParsing="false" onAction="#menuAjuda" text="Ajuda">
+                  <items>
+                    <MenuItem fx:id="menuSobre" mnemonicParsing="false" onAction="#MenuSobre" text="Sobre" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
